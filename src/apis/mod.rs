@@ -88,6 +88,7 @@ pub mod allow_list_block_list_api;
 pub mod beta_features_api;
 pub mod clients_api;
 pub mod configuration;
+pub mod domains_api;
 pub mod email_addresses_api;
 pub mod email_sms_templates_api;
 pub mod emails_api;
