@@ -120,6 +120,9 @@ pub struct UpdateUserRequest {
 	/// A custom date/time denoting _when_ the user signed up to the application, specified in RFC3339 format (e.g. `2012-10-20T07:15:20.902Z`).
 	#[serde(rename = "created_at", skip_serializing_if = "Option::is_none")]
 	pub created_at: Option<String>,
+	/// The maximum number of organizations the user can create.
+	#[serde(rename = "create_organizations_limit", skip_serializing_if = "Option::is_none")]
+	pub create_organizations_limit: Option<u64>,
 }
 
 impl UpdateUserRequest {
@@ -145,6 +148,7 @@ impl UpdateUserRequest {
 			delete_self_enabled: None,
 			create_organization_enabled: None,
 			created_at: None,
+			create_organizations_limit: None,
 		}
 	}
 }
